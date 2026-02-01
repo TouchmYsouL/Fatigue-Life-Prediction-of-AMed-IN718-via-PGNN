@@ -157,7 +157,7 @@ def total_loss(model, X, y,
     Returns:
       loss_total, loss_data(detached), loss_l2(detached), loss_phys(detached)
     """
-    pred = model(X)  # pred is y_scaled_pred
+    pred = model(X)
 
     # data loss (scaled space)
     loss_d = data_loss(y, pred, loss_type=loss_type, alpha=alpha, delta=delta)
